@@ -42,7 +42,7 @@ app.controller( 'worldWeatherOnline', [ '$scope', function ( $scope ) {
                     var data = value.date.split( '-' );
                     angular.forEach( value.hourly, function ( value, key ) {
                         value.time = value.time.replace( /([0-9]*)([0-9]{2})$/mi, '$1:$2:00' );
-                        if( (new Date( data[ 0 ] , data[ 1 ] - 1, data[ 2 ], (value.time.split( ':' ))[ 0 ], 0, 0, 0)).getTime() > (new Date()).getTime() ) {
+                        if( (new Date( data[ 0 ] , data[ 1 ] - 1, data[ 2 ], (value.time.split( ':' ))[ 0 ], 0, 0, 0)).getTime() > (new Date()).getTime() - 10800000 ) {
                             allInfo.push({
                                 data     : data[ 0 ] + '-' + data[ 1 ] + '-' + data[ 2 ] + ' ' + value.time,
                                 icon     : value.weatherIconUrl[ 0 ].value,

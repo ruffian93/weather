@@ -40,7 +40,7 @@ app.controller( 'openWeatherMap', [ '$scope', function ( $scope ) {
                     var dt_txt = value.dt_txt.split( ' ' ),
                         data = dt_txt[ 0 ].split( '-' ),
                         time = (dt_txt[ 1 ].split( ':' ))[ 0 ];
-                    if( (new Date( data[ 0 ] , data[ 1 ] - 1, data[ 2 ], time, 0, 0, 0)).getTime() > (new Date()).getTime() ) {
+                    if( (new Date( data[ 0 ] , data[ 1 ] - 1, data[ 2 ], time, 0, 0, 0)).getTime() > (new Date()).getTime() - 10800000 ) {
                         value.main.temp_min = Math.round( value.main.temp_min - 273.15 );
                         value.main.temp_max = Math.round( value.main.temp_max - 273.15 );
                         allInfo.push({
