@@ -27,7 +27,6 @@
 
         <script src="js/weather/openweathermap.js"></script>
         <script src="js/weather/worldweatheronline.js"></script>
-        <script src="js/weather/yahoo.js"></script>
 
     </head>
 
@@ -49,6 +48,7 @@
 
                 <div class="col-md-4 weather" ng-controller="openWeatherMap">
                     <div class="thumbnail {{load}}">
+                        <a href="http://www.openweathermap.org" target="_blank">openweathermap.org</a>
                         <i class="glyphicon glyphicon-refresh right btn btn-success" ng-click="updateWeather()"></i>
                         <h5>{{city.address}}</h5>
                         <hr>
@@ -78,6 +78,7 @@
 
                 <div class="col-md-4 weather" ng-controller="worldWeatherOnline">
                     <div class="thumbnail {{load}}">
+                        <a href="http://www.worldweatheronline.com" target="_blank">worldweatheronline.com</a>
                         <i class="glyphicon glyphicon-refresh right btn btn-success" ng-click="updateWeather()"></i>
                         <h5>{{city.address}}</h5>
                         <hr>
@@ -105,32 +106,12 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 weather" ng-controller="yahoo">
-                    <div class="thumbnail {{load}}">
-                        <i class="glyphicon glyphicon-refresh right btn btn-success" ng-click="updateWeather()"></i>
-                        <h5>{{city.address}}</h5>
-                        <hr>
-                        <h4>{{weather.data}}</h4>
-                        <div class="row">
-                            <div class="col-xs-4 img">
-                                <img ng-src="{{weather.icon}}">
-                            </div>
-                            <div class="col-xs-8">
-                                <h4>{{weather.main}}</h4>
-                                <h4>{{weather.temp}} °C</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <h5>Ветер: {{weather.speed}} км/ч</h5>
-                            </div>
-                            <div class="col-xs-6">
-                                <h5>Влажность: {{weather.humidity}}%</h5>
-                            </div>
-                        </div>
-                        <div class="btn btn-success left {{prevClass}}" ng-click="prev()">назад на 3 часа</div>
-                        <div class="btn btn-success right {{nextClass}}" ng-click="next()">вперёд на 3 часа</div>
-                        <div class="clear"></div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <h5>
+                            Тут должен был быть 3-тий блок с погодой,<br>
+                            но мне так и не удалось найти нормальный сервис.
+                        </h5>
                     </div>
                 </div>
 
