@@ -1,16 +1,3 @@
-//test
-//dfgdfg
-//dfg
-//df
-//gd
-//fg
-//dfg
-//d
-//fg
-//dfg
-//d
-//fg
-
 var app = angular.module( "myWeather", [ 'ngAutocomplete' ] );
 
 
